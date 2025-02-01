@@ -22,6 +22,10 @@ nav {
     font-size: 1.3rem;
 }
 
+.nav-title a {
+    text-decoration: none;
+}
+
 .nav-links a {
     text-decoration: none;
     margin: 0 20px;
@@ -55,6 +59,7 @@ nav input[type="search"] {
     transition: 0.3s;
 }
 
+
 /* Footer */
 footer {
     height: 10vh;
@@ -80,11 +85,61 @@ footer {
     margin: 0 5px;
 }
 
+/* Home Page - Hero section */
+
+.hero-section {
+    height: 80vh;
+    background-image: url(../src//assets/background.jpg);
+    background-size: cover;
+}
+
+.hero-container {
+    height: 100%;
+    background-color: #f2e8cfc8;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 60%;
+    color: var(--purple);
+}
+
+.main-content h1 {
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+.main-content p {
+    font-size: 1.4rem;
+}
+
+.main-buttons a {
+    text-decoration: none;
+    margin: 0px 10px;
+    background-color: var(--purple);
+    color: var(--beige);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.main-buttons a:hover {
+    background-color: var(--purple-hover);
+    transition: 0.3s;
+}
+
+.main-buttons {
+    margin: 15px;
+}
+
 /* Media Queries*/
 
 @media only screen and (max-width: 900px) {
 
-    nav {
+    nav,
+    select {
         /* width: 90%; */
         font-size: 1.1rem;
     }
@@ -118,11 +173,7 @@ footer {
 }
 
 
-/* Home Page - Hero section */
 
-.hero-section {
-    height: 80vh;
-}
 
 @media only screen and (max-width: 700px) {
     nav {

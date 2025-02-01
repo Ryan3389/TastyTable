@@ -6,6 +6,8 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import HomePage from './pages/HomePage.jsx'
+import CategoryPage from './pages/CategoryPage.jsx'
+import RandomPage from './pages/RandomPage.jsx'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -15,6 +17,14 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <HomePage />
+      },
+      {
+        path: '/category',
+        element: <CategoryPage />
+      },
+      {
+        path: '/random',
+        element: <RandomPage />
       }
     ]
   }
