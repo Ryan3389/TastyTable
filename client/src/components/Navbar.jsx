@@ -1,17 +1,4 @@
-// import { Link } from "react-router-dom"
-// function Navbar() {
-//     return (
-<select name="categories" id="categories">
-    <optgroup label="categories">
-        <option value="Breakfast">Breakfast</option>
-        <option value="Chicken">Chicken</option>
-        <option value="Beef">Beef</option>
-        <option value="Vegetarian">Vegetarian</option>
-        <option value="Dessert">Dessert</option>
-    </optgroup>
-</select>
-//     )
-// }
+
 
 // export default Navbar
 import { Link } from "react-router-dom"
@@ -25,10 +12,10 @@ function Navbar() {
                     </Link>
                 </span>
                 <span className="nav-links">
-                    <Link to="/category">Categories</Link>
-                    <Link to="/random">Random Recipe</Link>
-                    <input type="search" aria-label="search" />
-                    <button className="nav-search-btn">Search</button>
+                    <Link to='/breakfast'>Breakfast</Link>
+                    <Link to='/beef'>Beef</Link>
+                    <Link to='/chicken'>Chicken</Link>
+                    <Link to='/dessert'>Dessert</Link>
                 </span>
             </nav>
         </header>
@@ -36,3 +23,4 @@ function Navbar() {
 }
 
 export default Navbar
+

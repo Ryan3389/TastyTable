@@ -6,7 +6,11 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import HomePage from './pages/HomePage.jsx'
-import CategoryPage from './pages/CategoryPage.jsx'
+// import CategoryPage from './pages/CategoryPage.jsx'
+import BreakfastPage from './pages/BreakfastPage.jsx'
+import ChickenPage from './pages/ChickenPage.jsx'
+import BeefPage from './pages/BeefPage.jsx'
+import DessertPage from './pages/DessertPage.jsx'
 import RandomPage from './pages/RandomPage.jsx'
 const router = createBrowserRouter([
   {
@@ -19,8 +23,20 @@ const router = createBrowserRouter([
         element: <HomePage />
       },
       {
-        path: '/category',
-        element: <CategoryPage />
+        path: '/breakfast',
+        element: <BreakfastPage />
+      },
+      {
+        path: '/chicken',
+        element: <ChickenPage />,
+      },
+      {
+        path: '/beef',
+        element: <BeefPage />
+      },
+      {
+        path: '/dessert',
+        element: <DessertPage />
       },
       {
         path: '/random',

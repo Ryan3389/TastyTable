@@ -1,11 +1,7 @@
-// Breakfast
-// Chicken 
-// Beef
-// Vegetarian 
-// Dessert
 async function recipeCategory(req, res) {
+    const { category } = req.query
     try {
-        const url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert`
+        const url = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`
         const response = await fetch(url)
 
         if (!response.ok) {

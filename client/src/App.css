@@ -134,6 +134,31 @@ footer {
     margin: 15px;
 }
 
+/* Category Page */
+
+.category-section {
+    height: 80vh;
+    background-color: var(--beige);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category-btn-container button {
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: var(--purple);
+    color: var(--beige-font);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.category-btn-container button:hover {
+    background-color: var(--purple-hover);
+    transition: 0.3s;
+}
+
 /* Media Queries*/
 
 @media only screen and (max-width: 900px) {
