@@ -18,7 +18,7 @@ function RecipeCategory({ category }) {
                 setRecipeData(data)
                 console.log(data)
             } catch (error) {
-
+                console.error(error)
             }
         }
         fetchData()

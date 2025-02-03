@@ -8,7 +8,7 @@ function HomePage() {
                     <p>Search recipes, filter by category, or let us surprise you!</p>
                     <span className="main-buttons">
                         <Link>Find Recipes</Link>
-                        <Link>Surpise Me</Link>
+                        <Link to='/random'>Surpise Me</Link>
                     </span>
                 </article>
             </div>
