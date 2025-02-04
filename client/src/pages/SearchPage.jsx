@@ -4,12 +4,16 @@ function SearchPage() {
         recipeName: ""
     })
 
+    const [recipeData, setRecipeData] = useState([])
+
     const handleChange = (e) => {
         const { name, value } = e.target
         setSearchState({
             ...searchState,
             [name]: value
         })
+
+        console.log(searchState)
     }
 
     const handleFormSubmit = async (e) => {
@@ -28,8 +32,14 @@ function SearchPage() {
             }
 
             const data = await response.json()
+            const searchResults = data.searchResults.meals.map((recipe) => ({
+                recipeTitle: recipe.strMeal,
+                recipeImg: recipe.strMealThumb,
+                recipeLink: recipe.strSource
+            }))
 
-            console.log(data)
+            setRecipeData(searchResults)
+
 
         } catch (error) {
             console.error(error)
@@ -37,20 +47,31 @@ function SearchPage() {
     }
     return (
         <section className="category-section">
+
             <span className="search-container">
 
                 <form onSubmit={handleFormSubmit}>
-                    <label htmlFor="search">Search for your favourite recipes</label>
+                    <label htmlFor="recipeName">Search for your favourite recipes</label>
                     <input
                         type="text"
-                        name="search"
+                        name="recipeName"
                         id="search"
                         onChange={handleChange}
                         aria-label="search recipes" />
                     <input type="submit" value="search" />
 
                 </form>
+
             </span>
+            {recipeData && recipeData.map((recipe, index) => (
+                <article className="recipe-card" key={index}>
+                    <p>{recipe.recipeTitle}</p>
+                    <img src={recipe.recipeImg} className="recipe-img" alt={recipe.recipeTitle} />
+                    <a target="_blank" href={recipe.recipeLink}>
+                        <p>Check it out</p>
+                    </a>
+                </article>
+            ))}
         </section>
     )
 }
