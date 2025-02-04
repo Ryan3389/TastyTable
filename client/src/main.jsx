@@ -12,6 +12,7 @@ import ChickenPage from './pages/ChickenPage.jsx'
 import BeefPage from './pages/BeefPage.jsx'
 import DessertPage from './pages/DessertPage.jsx'
 import RandomPage from './pages/RandomPage.jsx'
+import SearchPage from './pages/SearchPage.jsx'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: '/random',
         element: <RandomPage />
+      },
+      {
+        path: '/search',
+        element: <SearchPage />
       }
     ]
   }

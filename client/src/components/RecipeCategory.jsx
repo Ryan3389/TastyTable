@@ -32,7 +32,7 @@ function RecipeCategory({ category }) {
                 {recipeData.map((recipe, index) => (
                     <article className="recipe-card" key={index}>
                         <p>{recipe.strMeal}</p>
-                        <img src={recipe.strMealThumb} className="recipe-img" alt="" />
+                        <img src={recipe.strMealThumb} className="recipe-img" alt={recipe.strMeal} />
                     </article>
                 ))}
             </div>

@@ -3,6 +3,7 @@
     --beige-font: #fff4d8;
     --beige: #F2E8CF;
     --purple: #5D4157;
+    --purple-border: #5d41574d;
     --purple-hover: #5d4157cf;
 }
 
@@ -146,18 +147,25 @@ footer {
 
 .recipe-container {
     display: grid;
-    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-columns: 2fr 2fr 2fr;
     gap: 5px;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
 }
 
 .recipe-card {
-    padding: 5px 10px;
-    margin: 0 40px;
-
+    border: 2px solid var(--purple-border);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .recipe-img {
-    height: 150px;
+    height: 140px
 }
 
 

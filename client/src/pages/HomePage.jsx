@@ -7,7 +7,7 @@ function HomePage() {
                     <h1>Discover Delicious <br /> Recipes in Seconds!</h1>
                     <p>Search recipes, filter by category, or let us surprise you!</p>
                     <span className="main-buttons">
-                        <Link>Find Recipes</Link>
+                        <Link to='/search'>Find Recipes</Link>
                         <Link to='/random'>Surpise Me</Link>
                     </span>
                 </article>
