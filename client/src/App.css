@@ -144,6 +144,24 @@ footer {
     align-items: center;
 }
 
+.recipe-container {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    gap: 5px;
+}
+
+.recipe-card {
+    padding: 5px 10px;
+    margin: 0 40px;
+
+}
+
+.recipe-img {
+    height: 150px;
+}
+
+
+
 .category-btn-container button {
     margin: 5px;
     padding: 5px 10px;

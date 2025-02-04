@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 function RecipeCategory({ category }) {
 
 
-    const [recipeData, setRecipeData] = useState(null)
+    const [recipeData, setRecipeData] = useState([])
 
     useEffect(() => {
         async function fetchData() {
@@ -15,8 +15,9 @@ function RecipeCategory({ category }) {
                 }
 
                 const data = await response.json()
-                setRecipeData(data)
-                console.log(data)
+
+                const topRecipesData = data.category.meals.slice(0, 9)
+                setRecipeData(topRecipesData)
             } catch (error) {
                 console.error(error)
             }
@@ -26,11 +27,16 @@ function RecipeCategory({ category }) {
     return (
         <section className="category-section">
             <h2>{category}</h2>
-            <article className="recipe-card">
-                <p>Recipe Title</p>
-                <p>Prep time</p>
-                <p>Recipe button</p>
-            </article>
+
+            <div className="recipe-container">
+                {recipeData.map((recipe, index) => (
+                    <article className="recipe-card" key={index}>
+                        <p>{recipe.strMeal}</p>
+                        <img src={recipe.strMealThumb} className="recipe-img" alt="" />
+                    </article>
+                ))}
+            </div>
+
         </section>
     )
 }
