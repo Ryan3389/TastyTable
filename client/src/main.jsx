@@ -7,7 +7,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import HomePage from './pages/HomePage.jsx'
 import RecipePage from './pages/RecipePage.jsx'
-import SearchPage from './pages/SearchPage.jsx'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -21,10 +20,6 @@ const router = createBrowserRouter([
       {
         path: '/recipe',
         element: <RecipePage />
-      },
-      {
-        path: '/search',
-        element: <SearchPage />
       }
     ]
   }

@@ -5,9 +5,8 @@ function HomePage() {
             <div className="hero-container">
                 <article className="main-content">
                     <h1>Discover Delicious <br /> Recipes in Seconds!</h1>
-                    <p>Search recipes, filter by category, or let us surprise you!</p>
+                    <p>Search recipes, filter by category</p>
                     <span className="main-buttons">
-                        <Link to='/search'>Search Recipes</Link>
                     </span>
                 </article>
             </div>

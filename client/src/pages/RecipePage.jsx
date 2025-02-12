@@ -27,7 +27,7 @@ function RecipePage() {
     }, [category])
     return (
         <section className="category-section">
-            <h2>{category}</h2>
+            <h2>{category.charAt(0).toUpperCase() + category.slice(1)}</h2>
 
             <div className="recipe-container">
                 {recipeData.map((recipe, index) => (
