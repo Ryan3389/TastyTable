@@ -12,10 +12,10 @@ function Navbar() {
                     </Link>
                 </span>
                 <span className="nav-links">
-                    <Link to='/breakfast'>Breakfast</Link>
-                    <Link to='/beef'>Beef</Link>
-                    <Link to='/chicken'>Chicken</Link>
-                    <Link to='/dessert'>Dessert</Link>
+                    <Link to={`/recipe?category=${encodeURIComponent('breakfast')}`}>Breakfast</Link>
+                    <Link to={`/recipe?category=${encodeURIComponent('beef')}`}>Beef</Link>
+                    <Link to={`/recipe?category=${encodeURIComponent('chicken')}`}>Chicken</Link>
+                    <Link to={`/recipe?category=${encodeURIComponent('dessert')}`}>Dessert</Link>
                 </span>
             </nav>
         </header>
