@@ -9,7 +9,7 @@
 
 /* Header + Nav */
 header {
-    height: 10vh;
+    height: 7vh;
     background-color: var(--orange);
 }
 
@@ -20,7 +20,7 @@ nav {
     align-items: center;
     width: 85%;
     margin: auto;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .nav-title a {
@@ -63,7 +63,7 @@ nav input[type="search"] {
 
 /* Footer */
 footer {
-    height: 10vh;
+    height: 7vh;
     background-color: var(--purple);
 }
 
@@ -89,7 +89,7 @@ footer {
 /* Home Page - Hero section */
 
 .hero-section {
-    height: 80vh;
+    height: 86vh;
     background-image: url(../src//assets/background.jpg);
     background-size: cover;
 }
@@ -139,11 +139,12 @@ footer {
 /* Category Page */
 
 .category-section {
-    height: 80vh;
+    height: 85vh;
     background-color: var(--beige);
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 5px 0;
 }
 
 .recipe-container {

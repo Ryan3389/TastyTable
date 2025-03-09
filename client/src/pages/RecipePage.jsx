@@ -17,7 +17,7 @@ function RecipePage() {
                 }
 
                 const data = await response.json()
-                const topRecipesData = data.category.meals.slice(0, 9)
+                const topRecipesData = data.category.meals.slice(0, 6)
                 setRecipeData(topRecipesData)
             } catch (error) {
                 console.error(error)
